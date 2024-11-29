@@ -15,11 +15,12 @@ int main() {
 
     if (subject1 < 0 || subject1 > 100 || subject2 < 0 || subject2 > 100 || subject3 < 0 || subject3 > 100) {
         printf("Invalid marks entered. Please enter marks between 0 and 100.\n");
+        return 0;
     }
 
     total = subject1 + subject2 + subject3;
     percentage = total / 3.0;
-    
+
     if (percentage < 25) {
         grade = 'F';
     } else if (percentage < 45) {
