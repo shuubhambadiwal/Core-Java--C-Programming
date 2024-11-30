@@ -1,51 +1,65 @@
 #include <stdio.h>
 
 int main() {
-    int roll_no, physics, chemistry, computer, total;
-    float percentage;
-    char name[30], fname[30], mname[30];
+    int rollNo;
+    char name, fname, mname, address, contact;
+    float physics, chemistry, compApp, total, percentage;
+    char division;
 
-    printf("Enter Roll Number: ");
-    scanf("%d", &roll_no);
+    printf("Input the Roll Number of the student: ");
+    scanf("%d", &rollNo);
 
-    printf("Enter Student Name: ");
-    scanf("%s", name);
+    printf("Student Name (single character): ");
+    scanf(" %c", &name); 
 
-    printf("Enter Father's Name: ");
-    scanf("%s", fname);
+    printf("Father's Name (single character): ");
+    scanf(" %c", &fname);
 
-    printf("Enter Mother's Name: ");
-    scanf("%s", mname);
+    printf("Mother's Name (single character): ");
+    scanf(" %c", &mname); 
 
-    printf("Enter marks for Physics: ");
-    scanf("%d", &physics);
+    printf("Address (single character): ");
+    scanf(" %c", &address); 
 
-    printf("Enter marks for Chemistry: ");
-    scanf("%d", &chemistry);
+    printf("Contact (single character): ");
+    scanf(" %c", &contact); 
 
-    printf("Enter marks for Computer Application: ");
-    scanf("%d", &computer);
+    // Input marks
+    printf("Input the marks of Physics: ");
+    scanf("%f", &physics);
 
-    total = physics + chemistry + computer;
-    percentage = total / 3.0;
+    printf("Input the marks of Chemistry: ");
+    scanf("%f", &chemistry);
 
-    printf("\n--- Student Report ---\n");
-    printf("Roll Number: %d\n", roll_no);
-    printf("Name: %s\n", name);
-    printf("Father's Name: %s\n", fname);
-    printf("Mother's Name: %s\n", mname);
-    printf("Total Marks: %d\n", total);
-    printf("Percentage: %.2f%%\n", percentage);
+    printf("Input the marks of Computer Application: ");
+    scanf("%f", &compApp);
+
+    total = physics + chemistry + compApp;
+    percentage = (total / 300) * 100;
 
     if (percentage >= 60) {
-        printf("Division: First\n");
+        division = 'A'; 
     } else if (percentage >= 50) {
-        printf("Division: Second\n");
+        division = 'B'; 
     } else if (percentage >= 40) {
-        printf("Division: Third\n");
+        division = 'C';
     } else {
-        printf("Division: Fail\n");
+        division = 'F'; 
     }
+
+    printf("\n--- Student Details ---\n");
+    printf("Roll Number: %d\n", rollNo);
+    printf("Name: %c\n", name);
+    printf("Father's Name: %c\n", fname);
+    printf("Mother's Name: %c\n", mname);
+    printf("Address: %c\n", address);
+    printf("Contact: %c\n", contact);
+
+    printf("\n--- Marks and Result ---\n");
+    printf("Marks (Physics, Chemistry, Computer Application): %f, %f, %f\n", physics, chemistry, compApp);
+    printf("Total Marks: %f\n", total);
+    printf("Percentage: %f\n", percentage);
+    printf("Division: %c\n", division); 
 
     return 0;
 }
