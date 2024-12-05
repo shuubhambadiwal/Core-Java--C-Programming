@@ -3,7 +3,7 @@
 #include <stdio.h>
 
 int main(){
-    int n = 9, sqr, sum=0, rem, temp;
+    int i=1, n = 9, sqr, sum=0, rem, temp;
     sqr = n * n;
     temp = sqr;
     for(int i=1;i<=2;i++) {
