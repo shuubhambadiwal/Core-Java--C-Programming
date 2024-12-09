@@ -2,22 +2,19 @@
 // input :3653542 
 
 #include<stdio.h>
-
 int main() {
-    int i;
-    for (i=2; i<=6; i++){
-        if (i%2 == 0){
-            printf("%d", i);
+    int num,i,rem;
+    printf("Enter the number value");
+    scanf("%d", &num);
+    for (i=1; i<=7; i++){
+        rem=num%10;
+        if (rem%2 == 0){
+            printf("%d", rem);
         }
+        num=num/10;
     }
     return 0;
 }
-
-
-
-
-
-
 
 
 
