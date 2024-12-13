@@ -3,8 +3,8 @@
 #include <stdio.h>
 
 int main()
-{   int a = 15;
-    int b = 23;
+{   int a = 2;
+    int b = 4;
     printf("The value of a is : %d \n",a);
     printf("The value of b is : %d \n",b);
     a = a + b;

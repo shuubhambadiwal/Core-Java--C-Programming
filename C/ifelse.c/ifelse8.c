@@ -9,6 +9,7 @@ int main()
     scanf("%c", &alpha);
     if( alpha == 'q' || alpha == 'w' || alpha == 'e' || alpha == 'r' || alpha == 't' || alpha == 'y' || alpha == 'u' || alpha == 'i' || alpha == 'o' || alpha =='p') {
         printf("q,w,e,r,t,y,u,i,o,p");
+        printf("This char is of Upper line");
     } 
     else {
         printf("Input not matched");
