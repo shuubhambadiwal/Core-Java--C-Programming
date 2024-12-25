@@ -29,10 +29,11 @@ public class Ifelse5{
             System.out.println("A");
         }
         // Percentage calculator
-        double percentage = marks * 100 / 500;
+        double percentage = marks * 100 / 100;
         System.out.println("Percentage: " + percentage);
     }
 }
+
 
 
 
