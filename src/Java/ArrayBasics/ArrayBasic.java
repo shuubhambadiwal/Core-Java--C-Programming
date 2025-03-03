@@ -7,4 +7,3 @@ public class ArrayBasic {
         System.out.println(B.length);
     }
 }
-
